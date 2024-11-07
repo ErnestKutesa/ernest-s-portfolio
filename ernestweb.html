@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            background-image: url('nyooooo.jpg'); /* Replace with your background image path */
+            background-size: cover; /* Cover the entire body */
+            color: #ffffff; /* White text for better contrast */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            scroll-behavior: smooth; /* Smooth scroll effect */
+        }
+
+        /* Header Section */
+        header {
+            background-color: rgba(0, 45, 91, 0.8); /* Semi-transparent navy blue for header */
+            color: #FFFFFF; /* White text */
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-weight: bold;
+        }
+
+        .menu a {
+            color: #FFFFFF; /* White links */
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        .menu a:hover {
+            color: #B3C7E6; /* Soft blue for hover effect */
+            border-bottom: 2px solid #B3C7E6;
+        }
+
+        /* Profile Image */
+        .profile-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px 0; /* Adjust margins as needed */
+            background-color: #c2d2e9; /* Light blue-gray for profile photo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left; /* Aligns the profile picture to the left */
+            margin-right: 5px; /* Adds space between the photo and text */
+        }
+
+        .profile-photo img {
+            width: 100%; /* Make image fit the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%;
+        }
+
+        /* Section Titles */
+        section {
+            width: 100%;
+            max-width: 800px;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 45, 91, 0.9); /* Dark blue with transparency */
+            opacity: 0; /* Initially hidden for fade-in effect */
+            animation: fadeIn 1.5s forwards; /* Fade-in animation */
+            animation-delay: 0.5s;
+        }
+
+        section h2 {
+            font-size: 1.2em;
+            color: #FFFFFF; /* White for section headings */
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Schools Attended Section */
+        #schools {
+            background-color: rgba(0, 45, 91, 0.9); /* Dark blue for schools section */
+        }
+
+        .school-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 30px 0;
+        }
+
+        .school-grid div {
+            background-color: #1a2e5f; /* Darker blue for each school box */
+            color: #FFFFFF; /* White for text */
+            border: 3px solid #B3C7E6; /* Light blue border */
+            border-radius: 8px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hobbies Section */
+        #hobbies {
+            background-color: rgba(0, 45, 91, 0.9); /* Dark blue for hobbies section */
+            color: #FFFFFF; /* White text for hobbies */
+        }
+
+        /* Work Experience Section */
+        #work {
+            background-color: rgba(0, 45, 91, 0.9); /* Dark blue for work experience section */
+            color: #FFFFFF; /* White text */
+        }
+
+        .work-experience {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1em;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            color: #c2d2e9; /* Light color for footer text */
+            font-size: 0.9em;
+            background-color: #002D5B; /* Navy blue for footer */
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p, footer a {
+            color: #c2d2e9; /* Light color for footer links */
+            text-decoration: none;
+            transition: color 0.3s; /* Hover effect */
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #B3C7E6; /* Hover color for footer links */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="profile-photo">
+            <img src="mine.jpg" alt="Profile picture of Ernest Kutesa"> <!-- Replace with your photo path -->
+        </div>
+        <h1>Ernest Kutesa - BLIS Student at COCIS</h1>
+        <div class="menu">
+            <a href="#schools">Schools</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#work">Work Experience</a>
+        </div>
+    </header>
+
+    <!-- Schools Attended Section -->
+    <section id="schools">
+        <h2>Schools Attended</h2>
+        <div class="school-grid">
+            <div>Tororo Christian Center</div>
+            <div>Tororo Education Centre</div>
+            <div>Triton Preparatory School, Ntungamo</div>
+            <div><a href="http://www.stpeterscollegetororo.ac.ug" target="_blank">St. Peter's College, Tororo</a></div>
+            <div>Standard College</div>
+            <div><a href="http://www.mak.ac.ug" target="_blank">Makerere University</a></div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <p>Reading books on Information Science and Management, following, watching, and playing sports/games. I also have a passion for documenting my experiences as well as traveling to learn about different cultures.</p>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="work">
+        <h2>Work Experience</h2>
+        <div class="work-experience">
+            <h3>Records and Archives Professional Intern</h3>
+            <h4>Ministry of Foreign Affairs, Uganda</h4>
+            <p><strong>Duration:</strong> June 2024 - August 2024</p>
+            <ul>
+                <li>Assisting in the classification, indexing, and storage of official documents to ensure easy retrieval.</li>
+                <li>Conducting regular audits of files to maintain organization and compliance with data management policies.</li>
+            </ul>
+            <p>This role enhanced my understanding of the importance of effective records management in supporting organizational efficiency and decision-making.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact: <a href="mailto:ernestkutesa20@gmail.com">ernestkutesa20@gmail.com</a></p>
+        <p>Follow me on <a href="#">LinkedIn</a> | <a href="#">Twitter</a> | <a href="#">GitHub</a></p>
+    </footer>
+
+</body>
+</html>
